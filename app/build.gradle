@@ -6,6 +6,17 @@ plugins {
     id 'kotlin-parcelize'
 }
 
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file("local.properties")
+
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withInputStream {
+        localProperties.load(it)
+    }
+}
+
+def placesApiKey = localProperties.getProperty("PLACES_API_KEY", "")
+
 android {
     namespace 'com.smartspend'
     compileSdk 34
@@ -17,8 +28,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField "String", "PLACES_API_KEY", "\"${project.findProperty('PLACES_API_KEY') ?: 'AIzaSyCOecQ0k7kXPUEY56dwqk_Tjjm3Exl1Fs8'}\""
-        manifestPlaceholders = [PLACES_API_KEY: project.findProperty('PLACES_API_KEY') ?: '']
+        buildConfigField "String", "PLACES_API_KEY", "\"${placesApiKey}\""
+        manifestPlaceholders = [PLACES_API_KEY: placesApiKey]
         vectorDrawables { useSupportLibrary true }
     }
 
