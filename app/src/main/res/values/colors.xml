@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#1E3A5F</color>
+    <color name="primary_dark">#142840</color>
+    <color name="accent">#2196F3</color>
+    <color name="background">#F5F7FA</color>
+    <color name="surface">#FFFFFF</color>
+
+    <color name="text_primary">#1A1A2E</color>
+    <color name="text_secondary">#6B7280</color>
+    <color name="text_hint">#9CA3AF</color>
+
+    <color name="amount_red">#E53935</color>
+    <color name="amount_green">#43A047</color>
+
+    <color name="pending_chip_bg">#FFF3E0</color>
+    <color name="raw_sms_bg">#F8F9FA</color>
+</resources>

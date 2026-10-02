@@ -1,0 +1,23 @@
+# Build outputs
+.gradle/
+.kotlin/
+**/build/
+.externalNativeBuild/
+.cxx/
+
+# Local configuration
+local.properties
+.env
+.env.*
+
+# Signing credentials
+*.jks
+*.keystore
+keystore.properties
+key.properties
+
+# IDE and macOS files
+.idea/
+*.iml
+.DS_Store
+*.hprof
